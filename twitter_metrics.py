@@ -1,5 +1,4 @@
 import csv
-import bisect
 
 tweets = []
 top_count = 10
@@ -9,34 +8,33 @@ class Tweet(object):
 
 	def __init__(self, id, link, text, time, impress, engage, engage_rate, retweets, replies, favs):
 
-		self.__id = id
-		self.__link = link
-		self.__text = text
-		self.__time = time
-		self.__impress = impress
-		self.__engage = engage
-		self.__engage_rate = engage_rate
-		self.__retweets = retweets
-		self.__replies = replies
-		self.__favs = favs
+		self._id = id
+		self._link = link
+		self._text = text
+		self._time = time
+		self._impress = impress
+		self._engage = engage
+		self._engage_rate = engage_rate
+		self._retweets = retweets
+		self._replies = replies
+		self._favs = favs
 
 	def __repr__(self):
-		return '{}\n {}\n {}\n RT: {}, Replies: {}, Favs: {}\n'.format(self.__link,
-								  								  self.__text,
-								  								  self.__time,
-								  								  self.__retweets,
-								  								  self.__replies,
-								  								  self.__favs)
+		return '{}\n {}\n {}\n RT: {}, Replies: {}, Favs: {}\n'.format(self._link,
+								  								  self._text,
+								  								  self._time,
+								  								  self._retweets,
+								  								  self._replies,
+								  								  self._favs)
 
 	def get_retweets(self):
-		return self.__retweets
+		return self._retweets
 
 	def get_replies(self):
-		return self.__replies
+		return self._replies
 
 	def get_favs(self):
-		return self.__favs
-
+		return self._favs
 
 def main():
 
