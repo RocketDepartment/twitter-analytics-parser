@@ -1,4 +1,4 @@
-twitter-analytics-parser
+Twitter Analytics Parser
 ========================
 
 A simple Python parser program for data from analytics.twitter.com
